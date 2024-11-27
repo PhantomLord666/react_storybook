@@ -1,0 +1,65 @@
+/* Estilo básico del chip */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 16px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 14px;
+  margin: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Icono dentro del chip */
+.chip-icon {
+  margin-right: 8px;
+}
+
+/* Etiqueta del chip */
+.chip-label {
+  margin-right: 8px;
+}
+
+/* Botón de cierre del chip */
+.chip-close {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+/* Estilo cuando el chip está seleccionado */
+.chip-selected {
+  background-color: #007bff;
+  background-color: var(--color-primary);
+
+  color: white;
+}
+
+
+
+/* Estilo cuando el chip está deshabilitado */
+.chip-disabled {
+  background-color: #e0e0e0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Estilo para el hover */
+.chip:hover {
+  background-color: #e0e0e0;
+}
+
+
+/* No se aplica hover cuando está deshabilitado */
+.chip-disabled:hover {
+  background-color: #e0e0e0;
+}
+
+.chip-selected:hover {
+  background-color: #007bff;
+  color: white;
+}

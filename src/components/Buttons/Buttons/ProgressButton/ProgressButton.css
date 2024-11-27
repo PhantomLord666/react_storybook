@@ -1,0 +1,53 @@
+.progress-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.progress-button.loading {
+  background-color: #6c757d;
+}
+
+.progress-button:disabled {
+  cursor: not-allowed;
+}
+
+.loader {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #fff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  .progress-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .loader {
+    width: 16px;
+    height: 16px;
+  }
+}

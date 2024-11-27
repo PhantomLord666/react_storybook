@@ -1,0 +1,124 @@
+.fab {
+  border: none;
+  border-radius: 50px; /* Cambiamos a un borde más redondeado cuando hay texto */
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  padding: 0 20px; /* Aumentamos el relleno horizontal */
+  height: 56px; /* Altura constante para mantener la apariencia de botón */
+  min-width: 56px; /* Garantizamos que no se haga más pequeño que un círculo */
+}
+
+/* Variante de color "info" */
+.fab-info {
+  background-color: #17a2b8; /* Color de fondo para info */
+}
+
+.fab-info:hover {
+  background-color: #138496; /* Color de fondo en hover */
+}
+
+/* Variante "outline" */
+.fab-outline {
+  background-color: transparent; /* Fondo transparente */
+  border: 2px solid black; /* Color del borde */
+  color: black; /* Color del texto */
+}
+
+.fab-outline:hover {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo en hover */
+}
+
+.fab-hide-label .fab-label {
+   overflow: hidden;
+    width: 0;
+    margin: 0;
+    transition: width .5s linear 0s, margin .2s linear .5s;
+}
+
+.fab-hide-label:hover .fab-label {
+    width: 90px;
+    margin: 0 5px;
+    transition: width .5s linear .2s, margin .2s linear 0s;
+}
+
+.fab-icon {
+  font-size: 20px;
+}
+
+/* Solo agrega margen cuando haya un label */
+.fab-icon-margin {
+  margin-right: 12px;
+}
+
+
+.fab-label {
+  font-size: 14px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+
+.fab-icon-only {
+  border-radius: 50%; /* Si no hay label, sigue siendo un círculo perfecto */
+  padding: 0;
+  width: 56px;
+  height: 56px;
+}
+
+/* Posición fija en la esquina inferior derecha */
+.fab-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.fab-primary {
+  background-color: var(--color-primary);
+}
+
+.fab-secondary {
+  background-color: #6c757d;
+}
+
+.fab-danger {
+  background-color: #dc3545;
+}
+
+.fab-success {
+  background-color: #28a745;
+}
+
+.fab:hover {
+  transform: scale(1.05);
+}
+
+.fab-disabled {
+  color: #aaa;
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .fab {
+    padding: 0 16px; /* Reduce el relleno horizontal */
+    height: 48px; /* Reduce el tamaño en pantallas pequeñas */
+    min-width: 48px;
+  }
+
+  .fab-icon {
+    font-size: 18px;
+  }
+
+  .fab-label {
+    font-size: 12px;
+  }
+}
+

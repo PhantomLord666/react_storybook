@@ -1,0 +1,124 @@
+/* Contenedor del Speed Dial */
+.speed-dial {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+/* Botón flotante principal (FAB) */
+.fab-sp{
+  background-color: #6200ea;
+  color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.fab-sp:hover {
+  transform: scale(1.1);
+}
+
+/* Contenedor de acciones */
+.actions {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+.actions.open {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Botones de acción */
+.action-button {
+  background-color: #03dac5;
+  color: white;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+  font-size: 16px; /* Ajuste del tamaño de la fuente para el contenido del botón */
+}
+
+.action-button:hover {
+  background-color: #018786;
+}
+
+.action-button .label {
+  margin-left: 8px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Estilos para que las acciones se ajusten mejor de tamaño */
+@media (max-width: 768px) {
+  .action-button .label {
+    display: none; /* Oculta completamente el texto del label */
+  }
+
+  .fab-sp {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .action-button {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    font-size: 14px; /* Ajuste del tamaño del texto */
+  }
+  
+  .actions {
+    bottom: 60px; /* Ajusta según sea necesario */
+    right: 4px;   /* Ajusta la posición para centrar los botones */
+  }
+
+ }
+
+@media (max-width: 480px) {
+ /* ocultar el texto (label) en pantallas pequeñas */
+  .action-button .label {
+    display: none; /* oculta el texto */
+  }
+
+  .fab-sp {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .action-button {
+    width: 36px;
+    height: 36px;
+    font-size: 12px;
+  }
+
+   /* Alinea los botones de acción con el FAB */
+  .actions {
+    bottom: 55px; /* Ajusta según sea necesario */
+    right: 6px;   /* Ajusta la posición para centrar los botones */
+  }
+ 
+}
+

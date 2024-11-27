@@ -1,0 +1,167 @@
+/* Button.css */
+.btn {
+  font-family: 'Arial', sans-serif;
+  border-radius: 4px;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  text-align: center;
+  min-width: 100px;
+  font-size: 1rem;
+  width: 100%; 
+}
+
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn--secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn--danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.btn--link {
+  background-color: transparent;
+  color: #007bff;
+  padding: 0px;
+}
+
+.btn--just_icon {
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 0px;
+}
+
+/* Tamaños de botones */
+.btn--small {
+  padding: 6px 12px;
+  font-size: var(--spacing-small);
+}
+
+.btn--medium {
+  padding: 8px 16px;
+  font-size: 1rem;
+}
+
+.btn--large {
+  padding: 12px 24px;
+  font-size: 1.125rem;
+}
+
+.btn--small-i {
+  width: 30px;
+  min-width: 30px;
+  padding: 6px 4px 6px 12px;
+  font-size: 0.875rem;
+}
+
+.btn--medium-i {
+  width: 40px;
+  min-width: 40px;
+  padding: 8px 8px 8px 16px;
+  font-size: 1rem;
+}
+
+.btn--large-i {
+  width: 50px;
+  min-width: 50px;
+  padding: 12px 16px 12px 24px;
+  font-size: 1.125rem;
+}
+
+.btn__icon {
+  margin-right: 8px;
+}
+
+
+
+.btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Estados: Hover, Focus, Active (Pressed) */
+.btn:hover {
+  filter: brightness(0.9);
+}
+
+.btn:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+  filter: brightness(0.85);
+}
+
+/* Disabled */
+.btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Estilos responsivos */
+@media (min-width: 480px) {
+  /* Estilos para pantallas móviles pequeñas */
+   .btn{
+    width: auto;
+  }
+}
+
+
+@media (min-width: 768px) { 
+  .btn--small {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+
+  .btn--medium {
+    padding: 12px 20px;
+    font-size: 1.125rem;
+  }
+
+  .btn--large {
+    padding: 16px 24px;
+    font-size: 1.25rem;
+  }
+
+  .btn--small-i {
+    width: 40px;
+    min-width: 40px;
+    padding: 8px 8px 8px 16px;
+    font-size: 1rem;
+  }
+
+   .btn--medium-i {
+    width: 50px;
+    min-width: 50px;
+    padding: 12px 12px 12px 20px;
+    font-size: 1.125rem;
+  }
+
+   .btn--large-i {
+    width: 60px;
+    min-width: 60px;
+    padding: 16px 16px 16px 24px;
+    font-size: 1.25rem;
+  }
+}

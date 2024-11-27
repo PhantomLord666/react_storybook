@@ -1,0 +1,44 @@
+.switch {
+  width: 50px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: #ddd;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.switch.on {
+  background-color: #4caf50;
+}
+
+.switch-toggle {
+  width: 23px;
+  height: 23px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: left 0.3s;
+}
+
+.switch.on .switch-toggle {
+  left: 26px; /* Mueve el toggle hacia la derecha cuando está encendido */
+}
+
+@media (max-width: 600px) {
+  .switch {
+    width: 40px;
+    height: 20px;
+  }
+
+  .switch-toggle {
+    width: 18px;
+    height: 18px;
+  }
+
+  .switch.on .switch-toggle {
+    left: 21px;
+  }
+}

@@ -1,0 +1,344 @@
+/* Timeline.css */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.timeline-event {
+  position: relative;
+  display: flex;
+  align-items: center; /* Alinear verticalmente el contenido */
+}
+
+/* Línea principal del timeline */
+.timeline-event::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color-primary, #007bff);
+}
+
+/* Puntos */
+.timeline-point {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary, #007bff);
+  transform: translate(-50%, -50%);
+}
+
+/* Estilos para opposite content */
+.timeline-event.opposite::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color, #007bff);
+}
+
+.timeline-event.oppositeOff.alternate::before,
+.timeline-event.oppositeOff.alternateReverse::before
+{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color, #007bff);
+}
+
+.timeline-event.oppositeOff.before::before
+{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color, #007bff);
+}
+
+/* Ajustes para el primer y último eventos */
+.timeline-event:first-child::before {
+  top: 50%;
+}
+
+.timeline-event:last-child::before {
+  bottom: 50%;
+}
+
+.timeline.vertical .timeline-event{
+    padding: 20px 0;
+}
+
+/* Punto en orientación vertical */
+.timeline.vertical .timeline-content {
+  margin-left: 20px;
+}
+
+.timeline.vertical.oppositeOff .timeline-content.after {
+  margin-left: 20px;
+}
+
+.timeline.vertical.oppositeOff .timeline-content.before {
+  margin-right: 20px;
+}
+
+
+/* Punto en orientación vertical */
+.timeline.vertical.opposite  .timeline-content {
+  margin: 0;
+}
+
+.timeline.vertical.oppositeOff  .timeline-content {
+  margin: 0px;
+}
+
+/* Punto en orientación vertical */
+.timeline.vertical .timeline-point {
+  left: 0;
+  top: 50%;
+}
+
+.timeline-event.opposite .timeline-point {
+  left: 50%;
+  top: 50%;
+}
+
+.timeline-event.oppositeOff.alternate .timeline-point,
+.timeline-event.oppositeOff.alternateReverse .timeline-point
+{
+  left: 50%;
+  top: 50%;
+}
+
+.timeline-event.oppositeOff.before .timeline-point
+{
+  left: 100%;
+  top: 50%;
+}
+
+/* Ajustes para el primer y último eventos */
+.timeline-event.oppositeOff.alternate:first-child::before,
+.timeline-event.oppositeOff.alternateReverse:first-child::before,
+.timeline-event.oppositeOff.before:first-child::before
+{
+  top: 50%;
+}
+
+.timeline-event.oppositeOff.alternate:last-child::before,
+.timeline-event.oppositeOff.alternateReverse:last-child::before, 
+.timeline-event.oppositeOff.before:last-child::before 
+{
+
+  bottom: 50%;
+}
+
+/* Contenido en ambos lados */
+.timeline-content {
+  flex: 1; /* Permitir que el contenido ocupe el espacio disponible */
+  padding: 10px 10px; /* Espaciado entre el contenido y el punto */
+}
+
+.timeline-content.left {
+  text-align: right; /* Alinear el contenido de la izquierda a la derecha */
+}
+
+.timeline-content.right {
+  text-align: left; /* Alinear el contenido de la derecha a la izquierda */
+}
+
+/* Punto en orientación vertical */
+.timeline.vertical .timeline-content.left {
+  margin-right: 20px; /* Espacio entre el punto y el contenido de la izquierda */
+}
+
+.timeline.vertical .timeline-content.right {
+  margin-left: 20px; /* Espacio entre el punto y el contenido de la derecha */
+}
+
+.timeline.vertical .timeline-content.before {
+  text-align: right;
+}
+
+/* Punto en orientación horizontal */
+.timeline.horizontal {
+  flex-direction: row;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.timeline.horizontal .timeline-event{
+  flex-direction: column;
+}
+
+/* Punto en orientación horizontal */
+.timeline.horizontal .timeline-content {
+  margin-top: 20px; 
+}
+
+.timeline.horizontal.opposite .timeline-content {
+  margin-top: 0; 
+}
+
+
+/* Punto en orientación vertical */
+.timeline.horizontal .timeline-content.left {
+  margin-bottom: 20px; /* Espacio entre el punto y el contenido de la izquierda */
+}
+
+.timeline.horizontal .timeline-content.right {
+  margin-top: 20px; /* Espacio entre el punto y el contenido de la derecha */
+}
+
+
+.timeline.horizontal .timeline-event::before {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2px;
+}
+
+.timeline.horizontal .timeline-event.opposite::before {
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+}
+
+.timeline.horizontal .timeline-point {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timeline.horizontal.opposite .timeline-point {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timeline.horizontal .timeline-event:first-child::before {
+  left: 50%;
+  width: 50%;
+}
+
+.timeline.horizontal .timeline-event:last-child::before {
+  width: 50%;
+}
+
+/* Opcional: Ajustar los márgenes en la vista horizontal */
+.timeline.horizontal .timeline-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .timeline.horizontal {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .timeline.horizontal .timeline-event::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--color, #007bff);
+    height: 100%;
+  }
+
+  .timeline.horizontal .timeline-event.opposite::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--color, #007bff);
+    height: 100%;
+  }
+
+  .timeline.horizontal .timeline-event:first-child::before {
+    left: -1px;
+    top: 50%;
+    height: 50%;
+    width: 2px;
+  }
+
+  .timeline.horizontal.opposite .timeline-event:first-child::before {
+    left: 50%;
+    top: 50%;
+    height: 50%;
+    width: 2px;
+  }
+
+  .timeline.horizontal .timeline-event:last-child::before {
+    height: 50%;
+    width: 2px;
+  }
+
+  .timeline.horizontal .timeline-event{
+      padding: 20px 0;
+    flex-direction: row;
+  }
+
+  .timeline.horizontal .timeline-content {
+    margin-left: 20px;
+  }
+
+  .timeline.horizontal.opposite  .timeline-content {
+    margin: 0;
+  }
+
+  .timeline.horizontal .timeline-point {
+    left: 0;
+    top: 50%;
+  }
+
+  .timeline.horizontal.opposite .timeline-point {
+    left: 50%;
+    top: 50%;
+  }
+
+  .timeline.horizontal .timeline-content.left {
+      text-align: right; 
+
+    margin-right: 20px; 
+  }
+
+  .timeline.horizontal .timeline-content.right {
+      text-align: left; 
+
+    margin-left: 20px; 
+  }
+
+]
+
+

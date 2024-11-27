@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: row; /* Alinea los elementos horizontalmente */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+}
+
+.asdf, .content {
+  flex: 1;
+  box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+.content-intern{
+    max-width: 500px;
+    padding-inline-start: 4rem;
+}
+
+.content-intern a{
+  color: var(--color-primary);
+  text-decoration: inherit;
+}
+
+.content {
+  background-color: #f9f9f9; /* Ejemplo: Diferente color de fondo */
+}
+
+.Carousel {
+  background-color: #eeeeee; /* Ejemplo: Color de fondo */
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Cambia a diseño vertical */
+  }
+
+  .Carousel, .content {
+    width: 100%; /* Ocupa todo el ancho en diseño vertical */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+  .content-intern{
+    padding-inline-start: 0rem;
+  }
+}
+
+.content-intern .btn{
+  width: 100%;
+}

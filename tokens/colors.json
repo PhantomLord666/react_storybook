@@ -1,0 +1,60 @@
+{
+  "color": {
+    "background": {
+      "light": { "value": "#ffffff" },
+      "dark": { "value": "#000000" },
+       "success-filled": {
+          "light": { "value": "#107c10" },
+          "dark": { "value": "#0d630d" }
+        },
+        "success-text": {
+          "light": { "value": "#f1faf1" },
+          "dark": { "value": "#182e10" }
+        },
+    },
+    "text": {
+      "light": { "value": "#000000" },
+      "dark": { "value": "#ffffff" }
+    },
+      "primary": {
+      "light": { "value": "tomato" },
+      "dark": { "value": "purple" }
+    },
+    "border": {
+      "success-outlined": {
+        "light": { "value": "#9fd89f" },
+        "dark": { "value": "#18c118" }
+      },
+       "success-filled": {
+        "light": { "value": "#107c10" },
+        "dark": { "value": "#18bd18" }
+      },
+        "success-text": {
+        "light": { "value": "#9fd89f" },
+        "dark": { "value": "#296529" }
+      },
+    },
+    "cl": {
+      "success-outlined": {
+        "light": { "value": "#0e700e" },
+        "dark": { "value": "#83f083" }
+      },
+      "success-filled": {
+        "light": { "value": "#fff" },
+        "dark": { "value": "#e8e6e3" }
+      },
+       "success-text": {
+        "light": { "value": "#242424" },
+        "dark": { "value": "#d1cdc7" }
+      },
+    },
+    "icon": {
+      "success-text": {
+        "light": { "value": "#0e700e" },
+        "dark": { "value": "#83f083" }
+      },
+    }
+  }
+}
+
+

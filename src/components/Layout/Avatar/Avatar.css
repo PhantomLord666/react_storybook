@@ -1,0 +1,86 @@
+/* Avatar.css */
+.avatar {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 4px; /* Espacio para el borde del estado */
+}
+
+.avatar.circle {
+  border-radius: 50%;
+}
+
+.avatar.square {
+  border-radius: 0;
+}
+
+.avatar.small {
+  width: var(--size-small);
+  height: var(--size-small);
+}
+
+.avatar.medium {
+  width: 80px;
+  height: 80px;
+}
+
+.avatar.large {
+  width: 120px;
+  height: 120px;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit; /* Mantiene el borde del avatar */
+}
+
+/* Bordes dinámicos para el estado */
+.avatar.online {
+  border: 3px solid green;
+}
+
+.avatar.offline {
+  border: 3px solid gray;
+}
+
+.avatar.busy {
+  border: 3px solid red;
+}
+
+/* Avatar.css - Responsiveness */
+@media (max-width: 600px) {
+  .avatar.small {
+    width: 30px;
+    height: 30px;
+  }
+
+  .avatar.medium {
+    width: 60px;
+    height: 60px;
+  }
+
+  .avatar.large {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  .avatar.small {
+    width: 20px;
+    height: 20px;
+  }
+
+  .avatar.medium {
+    width: 40px;
+    height: 40px;
+  }
+
+  .avatar.large {
+    width: 80px;
+    height: 80px;
+  }
+}
+

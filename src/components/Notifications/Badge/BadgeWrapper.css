@@ -1,0 +1,12 @@
+/* BadgeWrapper.css */
+.badge-wrapper {
+  position: relative;
+  display: inline-block; /* Important to keep content in view */
+}
+
+/* Badge positioning */
+.badge {
+  position: absolute;
+  z-index: 1;
+}
+

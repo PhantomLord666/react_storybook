@@ -1,0 +1,373 @@
+.toast-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 9999;
+  width: 100%;
+}
+
+.toast-container-top-right {
+  top: 1rem;
+  right: 1rem;
+  align-items: flex-end;
+}
+
+.toast-container-top-left {
+  top: 1rem;
+  left: 1rem;
+  align-items: flex-start;
+}
+
+.toast-container-bottom-right {
+  bottom: 1rem;
+  right: 1rem;
+  align-items: flex-end;
+}
+
+.toast-container-bottom-left {
+  bottom: 1rem;
+  left: 1rem;
+  align-items: flex-start;
+}
+
+.toast-container-top-center {
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+.toast-container-bottom-center {
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+
+.toast {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  max-width: 300px;
+  font-family: Arial, sans-serif;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.toast-default {
+  border-left: 5px solid #6c757d; /* Gris genérico */
+  background-color: #f8f9fa; /* Fondo claro */
+  color: #6c757d; /* Texto gris */
+}
+
+.toast-info {
+  background-color: #006e87;
+  color: white;
+  border: 1px solid #00a7cc;
+}
+
+.toast-info .toast-icon{
+  color: #56e0ff;
+}
+
+.toast-info .toast-close{
+  color: white;
+}
+
+.toast-success {
+  background-color: #0b5a0b;
+  color: white;
+  border: 1px solid #18c118;
+}
+
+.toast-success .toast-icon{
+  color: #83f083;
+}
+
+.toast-success .toast-close{
+  color: white;
+}
+
+.toast-warning {
+  border-left: 5px solid #ffc107;
+}
+
+
+.toast-error {
+  border-left: 5px solid #dc3545;
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toast-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.toast-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.toast-title {
+  font-weight: bold;
+  font-size: 1rem;
+  color: inherit;
+}
+
+.toast-message {
+  font-size: 0.875rem;
+}
+
+
+.toast-action {
+  background: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.toast-close {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  position: right;
+}
+
+.toast-progress {
+  height: 4px;
+  background-color: #007bff;
+  animation: progressBar linear forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progressBar {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+/* Animaciones de Show */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes flipIn {
+  from {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animaciones de Hide */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes flipOut {
+  from {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+}
+
+/* Animaciones de Show */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Animaciones de Hide */
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideOutTop {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideOutBottom {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+/* Clases para la animación de entrada y salida */
+.toast-show-slide-in-left {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+.toast-hide-slide-out-left {
+  animation: slideOutLeft 0.5s ease-out;
+}
+
+.toast-show-slide-in-right {
+  animation: slideInRight 0.5s ease-out;
+}
+
+.toast-hide-slide-out-right {
+  animation: slideOutRight 0.5s ease-out;
+}
+
+.toast-show-slide-in-top {
+  animation: slideInTop 0.5s ease-out;
+}
+
+.toast-hide-slide-out-top {
+  animation: slideOutTop 0.5s ease-out;
+}
+
+.toast-show-slide-in-bottom {
+  animation: slideInBottom 0.5s ease-out;
+}
+
+.toast-hide-slide-out-bottom {
+  animation: slideOutBottom 0.5s ease-out;
+}
+
+.toast-show-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.toast-hide-fade-out {
+  animation: fadeOut 0.5s ease-out;
+}
+
+
+.toast-show-zoom-in {
+  animation: zoomIn 0.5s ease-out;
+}
+
+.toast-hide-zoom-out {
+  animation: zoomOut 0.5s ease-out;
+}
+
+.toast-show-flip-in {
+  animation: flipIn 0.5s ease-out;
+}
+
+.toast-hide-flip-out {
+  animation: flipOut 0.5s ease-out;
+}
+

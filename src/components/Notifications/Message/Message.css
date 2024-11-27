@@ -1,0 +1,256 @@
+.message {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px auto; /* Centrar horizontalmente */
+  font-size: 14px;
+  transition: all 0.3s ease;
+  width: 90%; /* Ajuste inicial para pantallas pequeñas */
+  max-width: 600px; /* Tamaño máximo */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.message-icon {
+  margin-right: 10px;
+  font-size: 1.5em; /* Escalar el ícono */
+}
+
+
+.message-content {
+  flex: 1;
+  word-wrap: break-word; /* Permitir que el texto se ajuste */
+}
+
+.message-close {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Variants */
+.message-filled {
+  color: #fff;
+}
+
+.message-outlined {
+  background: transparent;
+  border: 2px solid currentColor;
+}
+
+.message-text {
+  background: transparent;
+  color: currentColor;
+}
+
+/* Types */
+.message-normal {
+  background: #e0e0e0;
+  color: #000;
+}
+
+.message-success {
+  background: #4caf50;
+  color: #e8e6e3;
+}
+
+.message-info {
+  background: #2196f3;
+  color: #fff;
+}
+
+.message-warning {
+  background: #ff9800;
+  color: #fff;
+}
+
+.message-error {
+  background: #f44336;
+  color: #fff;
+}
+
+.message .message-close {
+    color: #d1cdc7;
+}
+
+/* normal-message */
+.message.message-normal.message-filled {
+  background:  #494f52;
+  color: #e8e6e3;
+  border: 2px solid #6c6459;
+}
+
+.message.message-normal.message-outlined {
+  background: transparent;
+  color: #d1cdc7;
+  border: 2px solid #6e161e #3d4245;
+}
+
+.message.message-normal.message-outlined .message-close{
+  color: #d1cdc7;
+}
+
+.message.message-normal.message-text {
+  background: #1e2021;
+  color: #d1cdc7;
+  border: 2px solid  #3d4245;
+}
+
+.message.message-normal.message-text .message-icon {
+  color: #aba398;
+}
+
+/* success-message */
+
+.message.message-success.message-filled {
+  background:  var(--color-background-success-filled);
+  color:  var(--color-cl-success-filled);
+  border: 2px solid var( --color-border-success-filled);
+}
+
+.message.message-success.message-outlined {
+  background: transparent;
+  color:  var(--color-cl-success-outlined);
+  border: 2px solid var(--color-border-success-outlined);
+}
+
+.message.message-success.message-outlined .message-close{
+  color:  var(--color-cl-success-outlined);
+}
+
+.message.message-success.message-text {
+  background: var(--color-background-success-text);
+  color: var(--color-cl-success-text);
+  border: 2px solid var(--color-border-success-text);
+}
+
+.message.message-success.message-text .message-icon {
+  color: var(--color-icon-success-text);
+}
+
+
+/* info-message */
+.message.message-info.message-filled {
+  background: #007a96;
+  color: #e8e6e3;
+  border: 2px solid  #00a2c7;
+}
+
+.message.message-info.message-outlined {
+  background: transparent;
+  color: #68e2ff;
+  border: 2px solid #185f6f;
+}
+
+.message.message-info.message-outlined .message-close{
+  color: #68e2ff;
+}
+
+.message.message-info.message-text {
+  background: #0b2a31;
+  color: #d1cdc7;
+  border: 2px solid  #185f6f;
+}
+
+.message.message-info.message-text .message-icon {
+  color: #56e0ff;
+}
+
+/* waringn-message */
+.message.message-warning.message-filled {
+  background:  #ae2f01;
+  color: #e8e6e3;
+  border: 2px solid #bc3301;
+}
+
+.message.message-warning.message-outlined {
+  background: transparent;
+  color: #fe7543;
+  border: 2px solid #732b0f;
+}
+
+.message.message-warning.message-outlined .message-close{
+  color: #fe7543;
+}
+
+.message.message-warning.message-text {
+  background: #331508;
+  color: #d1cdc7;
+  border: 2px solid  #732b0f;
+}
+
+.message.message-warning.message-text .message-icon {
+  color: #fe7543;
+}
+
+/* error-message */
+.message.message-error.message-filled {
+  background:  #9e0c19;
+  color: #e8e6e3;
+  border: 2px solid #b20e1c;
+}
+
+.message.message-error.message-outlined {
+  background: transparent;
+  color: #f15461;
+  border: 2px solid #6e161e;
+}
+
+.message.message-error.message-outlined .message-close{
+  color: #f15461;
+}
+
+.message.message-error.message-text {
+  background: #33080d;
+  color: #d1cdc7;
+  border: 2px solid  #6e161e;
+}
+
+.message.message-error.message-text .message-icon {
+  color: #f15461;
+}
+
+/* Alignments */
+.align-left {
+  justify-content: flex-start;
+}
+
+.align-center {
+  text-align: center;
+  justify-content: center;
+}
+
+
+.align-right {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.message .message-close {
+  margin-left: auto;
+
+}
+
+/* Responsiveness */
+@media (min-width: 768px) {
+  .message {
+    width: 80%; /* Más ancho para tablets y dispositivos medianos */
+    font-size: 16px; /* Texto más grande */
+    padding: 15px 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .message {
+    width: 60%; /* Más estrecho en dispositivos grandes */
+    font-size: 18px; /* Aumentar la fuente */
+    padding: 20px 25px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .message {
+    width: 50%; /* Limitar el ancho en pantallas muy grandes */
+  }
+}

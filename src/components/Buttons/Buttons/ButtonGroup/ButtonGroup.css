@@ -1,0 +1,65 @@
+
+.button-group {
+  display: flex;
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 0;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  flex-grow: 1; /* Permite que los botones crezcan y se adapten al ancho */
+  text-align: center;
+}
+
+.button + .button {
+  border-left: none; /* Elimina el borde entre botones */
+}
+
+.button.selected {
+  background-color: #0056b3;
+  color: white;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 600px) {
+  .button-group {
+    flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+  }
+
+  .button {
+    margin-bottom: 5px; /* Añade espacio entre los botones en modo vertical */
+    border-left: 1px solid #007bff; /* Recupera el borde lateral */
+  }
+
+  .button + .button {
+    border-left: 1px solid #007bff; /* Recupera el borde izquierdo cuando los botones son verticales */
+  }
+}
+
+
+@media (min-width: 600px) {
+  /* Primer botón: bordes redondeados a la izquierda */
+  .button:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  /* Último botón: bordes redondeados a la derecha */
+  .button:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}

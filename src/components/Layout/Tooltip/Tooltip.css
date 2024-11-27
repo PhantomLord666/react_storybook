@@ -1,0 +1,135 @@
+/* Tooltip.css */
+.tooltip-container {
+  display: inline-block;
+  position: relative;
+}
+
+.tooltip-box {
+  position: absolute;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 100;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Añadimos el triángulo al tooltip */
+.tooltip-box::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Triángulo en diferentes posiciones */
+.tooltip-box.top::after {
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px 5px 0 5px;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip-box.bottom::after {
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip-box.left::after {
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent black;
+}
+
+.tooltip-box.right::after {
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 5px 5px 5px 0;
+  border-color: transparent black transparent transparent;
+}
+
+/* Menú del tooltip */
+.tooltip-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tooltip-menu-item {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
+  border-bottom: 1px solid #ccc;
+}
+
+.tooltip-menu-item:hover {
+  background-color: #e0e0e0;
+}
+
+/* Posiciones del tooltip */
+.tooltip-box.top { bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 8px; }
+.tooltip-box.bottom { top: 100%; left: 50%; transform: translateX(-50%); margin-top: 8px; }
+.tooltip-box.left { right: 100%; top: 50%; transform: translateY(-50%); margin-right: 8px; }
+.tooltip-box.right { left: 100%; top: 50%; transform: translateY(-50%); margin-left: 8px; }
+
+/* Tamaños del tooltip */
+.tooltip-box.small { font-size: 10px; padding: 4px 8px; }
+.tooltip-box.medium { font-size: 14px; padding: 6px 10px; }
+.tooltip-box.large { font-size: 18px; padding: 8px 12px; }
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .tooltip-box { font-size: 12px; }
+}
+
+.card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card .card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.card .card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.card .card_title {
+  text-align: center;
+  border-radius: 0px 0px 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -80px;
+  height: 40px;
+}
+
+.card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+.title-white {
+  color: white;
+}

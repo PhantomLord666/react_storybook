@@ -1,0 +1,79 @@
+.carousel {
+  position: relative;
+  width: 100%; /* Ancho del carrusel */
+  max-width: 100%; /* Se asegura de no exceder el contenedor */
+  overflow: hidden; /* Oculta los elementos fuera del área visible */
+}
+
+.carousel-slides {
+  display: flex; /* Coloca los slides en una fila */
+  transition: transform 0.5s ease-in-out; /* Transición suave entre slides */
+}
+
+.carousel-slide {
+  flex: 0 0 100%; /* Cada slide ocupa el 100% del ancho del carrusel */
+  max-width: 100%; /* Se asegura de no exceder el contenedor */
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0; /* Fondo visible si no hay contenido */
+}
+
+.carousel-slide img {
+  width: 100%; /* Imagen se ajusta al contenedor */
+  height: auto;
+  object-fit: cover; /* Mantiene proporciones de la imagen */
+}
+
+.carousel-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.arrow {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: gray;
+  border: none;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background: black;
+}
+
+.carousel-play-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
