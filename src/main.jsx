@@ -8,7 +8,8 @@ import Chips from './components/Buttons/Chips/Chips.jsx'; // Asegúrate de que l
 import FloatingActionButton from './components/Buttons/FloatingActionButton/FloatingActionButton.jsx'; // Asegúrate de que la ruta sea correcta h
 import Tooltip from './components/Layout/Tooltip/Tooltip.jsx' 
 import Accordion from './components/Navigation/Accordion/Accordion.jsx'
-import { FaInfoCircle, FaFolderOpen } from 'react-icons/fa';
+import { FaCheckCircle, FaInfoCircle, FaFolderOpen } from 'react-icons/fa';
+import Message from './components/Notifications/Message/Message.jsx'
 
 const args = {
   buttons: [
@@ -78,6 +79,14 @@ const tableArgs = {
   ),
 };
 
+const msgArgs = {
+  type: 'success',
+  variant: 'text',
+  icon: <FaCheckCircle />,
+  children: 'Operation successful!',
+  onClose: () => alert('Message closed!'),
+  align: "left",
+}
 
 const defaultArgs = {
   title: 'Default Accordion',
@@ -100,6 +109,12 @@ createRoot(document.getElementById('root')).render(
     <Button label="" variant="just_icon" size="large-i" icon="🎃"/>
     <p>&nbsp;</p>
     <Button label="Cancel" variant="danger" size="medium" icon="🎃"/>
+    <p>&nbsp;</p>
+    <Message {...msgArgs}/>
+    <p>&nbsp;</p>
+    <Message {...msgArgs} variant="filled"/>
+    <p>&nbsp;</p>
+    <Message {...msgArgs} variant="outlined"/>
     <p>&nbsp;</p>
     <>
     <Accordion  {...defaultArgs} />

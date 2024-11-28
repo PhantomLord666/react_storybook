@@ -15,8 +15,22 @@ function App() {
     setIsChipVisible(false);
   };
 
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+  };
+
   return (
     <>
+      <div>
+      <h1>Hello, React!</h1>
+        <button onClick={toggleTheme}>
+          Switch to {theme === "light" ? "Dark" : "Light"} Mode
+        </button>
+      </div>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

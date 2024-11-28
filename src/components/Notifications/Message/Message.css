@@ -129,6 +129,9 @@
   color: var(--color-icon-success-text);
 }
 
+.message.message-success.message-text .message-close {
+  color: var(--color-cl-success-text);
+}
 
 /* info-message */
 .message.message-info.message-filled {
@@ -213,6 +216,7 @@
 
 /* Alignments */
 .align-left {
+  text-align: left;
   justify-content: flex-start;
 }
 

@@ -30,7 +30,7 @@ export const decorators = [
    // const theme = document.documentElement.getAttribute('data-theme') || 'dark';
     const theme1= 'dark';
     const theme2= 'light';
-    if (theme2 === 'dark') {
+    if (theme1 === 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
     } else {
       document.documentElement.setAttribute('data-theme', 'light');
