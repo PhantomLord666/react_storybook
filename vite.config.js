@@ -28,6 +28,10 @@ export default defineConfig(({ mode }) => {
       "process.env": env,
     },
     plugins: [react()],
+    server: {
+      host: true, // Permite usar tu IP en lugar de "localhost"
+      port: 5173, // El puerto por defecto o el que prefieras
+    },
   }
 })
 
