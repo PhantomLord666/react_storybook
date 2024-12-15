@@ -1,0 +1,104 @@
+/* src/components/Card/Card.module.css */
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+  max-width: 100%;
+  width: 100%; /* Asegura que ocupe el espacio disponible */
+}
+
+.cardHorizontal {
+  flex-direction: row;
+  width: 100%;
+}
+
+.cardVertical {
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardHover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 250px; /* Evita que la imagen crezca demasiado en vertical */
+}
+
+.cardHorizontalImage {
+  width: 40%;
+  height: auto;
+  max-height: none; /* Permite usar todo el contenedor en horizontal */
+}
+
+.cardContent {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1; /* Asegura que el contenido ocupe el espacio restante */
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+.cardFooter {
+  padding: 12px 16px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #777;
+}
+
+.cardHorizontalFooter {
+  border-top: none;
+  border-left: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 600px;
+  }
+
+  .cardHorizontal {
+    max-width: 600px;
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+}
+
+/* Media query: Pantallas menores a 768px */
+@media (max-width: 767px) {
+  .cardHorizontal {
+    flex-direction: column; /* Actúa como vertical */
+    height: auto;
+  }
+
+  .cardHorizontalImage {
+    width: 100%; /* Imagen ocupa todo el ancho */
+    height: 100%; /* Limita la altura */
+  }
+
+  .cardHorizontalFooter {
+    border-left: none; /* Quita el borde lateral en footer */
+    border-top: 1px solid #eee; /* Aplica borde superior */
+  }
+}

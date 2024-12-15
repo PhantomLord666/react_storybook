@@ -6,6 +6,11 @@ import { actions } from '@storybook/addon-actions';
 import { withTests } from '@storybook/addon-jest';
 import { fn } from '@storybook/test';
 
+const googleFontsLink = document.createElement('link');
+googleFontsLink.rel = 'stylesheet';
+googleFontsLink.href = 'https://fonts.googleapis.com/css2?family=Century+Gothic&display=swap'; // Cambia a la fuente que desees
+document.head.appendChild(googleFontsLink);
+
 export const parameters = {
   actions: {
     handles: ['mouseover', 'click'], // Add specific actions here
